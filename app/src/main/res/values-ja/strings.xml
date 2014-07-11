@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AutoMannerPlus</string>
+    <string name="action_settings">設定</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pref_category_master">基本設定</string>
+    <string name="pref_checkbox_enable">AutoMannerPlusを有効にする</string>
+    <string name="pref_checkbox_enable_summary">アプリケーションを有効にします\nマナーモードの状態でイヤホンを接続すると自動的にマナーモードが解除されます(抜くと自動的にマナーモードが復帰します)\n※マナーモードになっていない状態でイヤホンを接続しその後抜いてもマナーモードにはなりません</string>
+
+</resources>

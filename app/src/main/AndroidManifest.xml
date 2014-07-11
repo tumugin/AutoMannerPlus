@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="net.kazukioishi.automannerplus"
+    android:versionCode="5"
+    android:versionName="1.0.4" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="net.kazukioishi.automannerplus.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <receiver
+            android:name="HeadphoneReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="net.kazukioishi.automannerplus.SettingsScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="HeadphoneReceiverService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <receiver android:name="OnBootReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED"><intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/><category android:name="android.intent.category.DEFAULT" />
+                
+            </intent-filter></receiver>
+    </application>
+
+</manifest>

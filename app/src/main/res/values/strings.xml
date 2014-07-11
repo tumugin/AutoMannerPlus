@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AutoMannerPlus</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pref_category_master">Application settings</string>
+    <string name="pref_checkbox_enable">Enable AutoMannerPlus</string>
+    <string name="pref_checkbox_enable_summary">This will enable application.</string>
+
+</resources>
